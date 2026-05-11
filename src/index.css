@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #5b4fff;
+  --primary-dark: #4338e0;
+  --primary-light: #ede9ff;
+  --accent: #ff6b6b;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --bg: #f5f4ff;
+  --surface: #ffffff;
+  --surface2: #faf9ff;
+  --border: #e8e5ff;
+  --text: #1a1535;
+  --text-muted: #8b87a8;
+  --shadow-sm: 0 2px 8px rgba(91,79,255,0.08);
+  --shadow-md: 0 8px 24px rgba(91,79,255,0.12);
+  --shadow-lg: 0 20px 48px rgba(91,79,255,0.18);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Outfit', sans-serif;
+}
+
+button {
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+input, textarea {
+  font-family: 'DM Sans', sans-serif;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.page-enter {
+  animation: fadeIn 0.35s ease forwards;
+}
