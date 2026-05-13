@@ -3,13 +3,15 @@ import { genererCode, envoyerCodeConfirmation } from '../../emailService'
 
 function Inscription({ classes, onCodeEnvoye, onConnexion }) {
   const [etape, setEtape] = useState('formulaire') // 'formulaire' | 'envoi'
+  // State initial — ajoute motDePasse
   const [form, setForm] = useState({
-    prenom: '',
-    nom: '',
-    email: '',
-    etablissement: '',
-    matiere: '',
-    classesGerees: []
+  prenom: '',
+  nom: '',
+  email: '',
+  motDePasse: '',        // ← nouveau
+  etablissement: '',
+  matiere: '',
+  classesGerees: []
   })
   const [erreur, setErreur] = useState('')
 
@@ -33,6 +35,10 @@ function Inscription({ classes, onCodeEnvoye, onConnexion }) {
     if (!form.prenom || !form.nom || !form.email || !form.etablissement || !form.matiere) {
       setErreur('Merci de remplir tous les champs.')
       return
+    }
+    if (form.motDePasse.length < 6) {
+     setErreur('Le mot de passe doit contenir au moins 6 caractères.')
+     return
     }
     if (form.classesGerees.length === 0) {
       setErreur('Sélectionne au moins une classe.')
@@ -86,6 +92,19 @@ function Inscription({ classes, onCodeEnvoye, onConnexion }) {
               <label style={styles.label}>Adresse email</label>
               <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="" style={styles.input} />
             </div>
+
+            {/* Mot de passe */}
+            <div style={styles.champWrap}>
+              <label style={styles.label}>Mot de passe</label>
+              <input
+                     name="motDePasse"
+                     type="password"
+                     value={form.motDePasse}
+                     onChange={handleChange}
+                     placeholder="Minimum 6 caractères"
+                     style={styles.input}
+              />
+             </div>
 
             {/* Établissement */}
             <div style={styles.champWrap}>
