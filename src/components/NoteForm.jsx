@@ -46,7 +46,7 @@ function NoteForm({ onSauvegarder, matiereFixe, professeurFixe }) {
             <div style={styles.champWrap}>
               <label style={styles.label}>Matière</label>
               <input type="text" value={matiere} onChange={e => setMatiere(e.target.value)}
-                placeholder="Mathématiques..." style={styles.input} list="matieres" autoFocus />
+                placeholder="" style={styles.input} list="matieres" autoFocus />
               <datalist id="matieres">{matieresSuggestions.map(m => <option key={m} value={m} />)}</datalist>
             </div>
           )}
@@ -55,7 +55,7 @@ function NoteForm({ onSauvegarder, matiereFixe, professeurFixe }) {
             <div style={styles.champWrap}>
               <label style={styles.label}>Professeur</label>
               <input type="text" value={professeur} onChange={e => setProfesseur(e.target.value)}
-                placeholder="Nom du professeur" style={styles.input} />
+                placeholder="" style={styles.input} />
             </div>
           )}
 
@@ -63,7 +63,7 @@ function NoteForm({ onSauvegarder, matiereFixe, professeurFixe }) {
             <label style={styles.label}>Note /20</label>
             <div style={styles.noteWrap}>
               <input type="number" value={valeur} onChange={e => setValeur(e.target.value)}
-                placeholder="0 – 20" min="0" max="20" step="0.5"
+                placeholder="" min="0" max="20" step="0.5"
                 style={{ ...styles.input, ...styles.noteInput }} autoFocus={!!matiereFixe} />
               {valeur !== '' && (
                 <div style={{ ...styles.notePreview, color: couleurNote(), borderColor: couleurNote() }}>

@@ -61,7 +61,7 @@ function Connexion({ onConnecte, onInscription }) {
               type="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              placeholder="ton@email.com"
+              placeholder=""
               style={styles.input}
               autoFocus
             />
@@ -73,7 +73,7 @@ function Connexion({ onConnecte, onInscription }) {
               type="password"
               value={motDePasse}
               onChange={e => setMotDePasse(e.target.value)}
-              placeholder="••••••••"
+              placeholder=""
               style={styles.input}
             />
           </div>
