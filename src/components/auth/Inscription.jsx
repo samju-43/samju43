@@ -73,24 +73,24 @@ function Inscription({ classes, onCodeEnvoye, onConnexion }) {
             <div style={styles.ligne}>
               <div style={styles.champWrap}>
                 <label style={styles.label}>Prénom</label>
-                <input name="prenom" value={form.prenom} onChange={handleChange} placeholder="Alice" style={styles.input} />
+                <input name="prenom" value={form.prenom} onChange={handleChange} placeholder="" style={styles.input} />
               </div>
               <div style={styles.champWrap}>
                 <label style={styles.label}>Nom</label>
-                <input name="nom" value={form.nom} onChange={handleChange} placeholder="Martin" style={styles.input} />
+                <input name="nom" value={form.nom} onChange={handleChange} placeholder="" style={styles.input} />
               </div>
             </div>
 
             {/* Email */}
             <div style={styles.champWrap}>
               <label style={styles.label}>Adresse email</label>
-              <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="alice.martin@ecole.fr" style={styles.input} />
+              <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="" style={styles.input} />
             </div>
 
             {/* Établissement */}
             <div style={styles.champWrap}>
               <label style={styles.label}>Établissement</label>
-              <input name="etablissement" value={form.etablissement} onChange={handleChange} placeholder="Lycée Victor Hugo" style={styles.input} />
+              <input name="etablissement" value={form.etablissement} onChange={handleChange} placeholder="" style={styles.input} />
             </div>
 
             {/* Matière */}

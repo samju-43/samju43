@@ -44,7 +44,7 @@ function Verification({ form, codeAttendu, onSuccess, onRetour }) {
               type="text"
               value={codeSaisi}
               onChange={e => setCodeSaisi(e.target.value)}
-              placeholder="123456"
+              placeholder=""
               maxLength={6}
               style={styles.inputCode}
               autoFocus

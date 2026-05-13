@@ -41,7 +41,7 @@ function Connexion({ onConnecte, onInscription }) {
               type="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
-              placeholder="alice.martin@ecole.fr"
+              placeholder=""
               style={styles.input}
               autoFocus
             />
